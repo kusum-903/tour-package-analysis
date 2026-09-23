@@ -84,7 +84,7 @@ The dataset used in this project is the Travel Package Purchase Prediction / Vis
 
 Original/public dataset source:
 
-https://huggingface.co/datasets/Manasa53/visit-with-us-raw-data
+https://www.kaggle.com/datasets/sanamps/tourpackageprediction
 
 ---
 
