@@ -1,0 +1,10 @@
+Feature,Correlation,Abs_Correlation,Direction,Strength
+Age,-0.1407,0.1407,Negative,Weak
+MonthlyIncome,-0.1244,0.1244,Negative,Weak
+NumberOfFollowups,0.1176,0.1176,Positive,Weak
+PreferredPropertyStar,0.0975,0.0975,Positive,Weak
+DurationOfPitch,0.0756,0.0756,Positive,Weak
+PitchSatisfactionScore,0.0563,0.0563,Positive,Weak
+NumberOfTrips,0.0177,0.0177,Positive,Negligible
+NumberOfPersonVisiting,0.0142,0.0142,Positive,Negligible
+NumberOfChildrenVisiting,0.0108,0.0108,Positive,Negligible

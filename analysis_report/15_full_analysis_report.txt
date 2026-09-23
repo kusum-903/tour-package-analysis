@@ -1,0 +1,255 @@
+=================================================================
+SECTION 1 — DATASET SUMMARY
+=================================================================
+             Metric     Value
+         Total Rows      4657
+      Total Columns        20
+    Numeric Columns         9
+Categorical Columns         6
+     Binary Columns         2
+      Target Column ProdTaken
+     Missing Values         0
+     Duplicate Rows         0
+
+=================================================================
+SECTION 2 — DESCRIPTIVE STATISTICS (Numeric Features)
+=================================================================
+                           count      mean      std     min      25%      50%      75%      max   skew  kurtosis
+Age                       4657.0     37.13     8.95    18.0     31.0     36.0     42.0     61.0  0.474    -0.163
+DurationOfPitch           4657.0     15.43     8.35     5.0      9.0     13.0     19.0    127.0  1.842    12.904
+NumberOfPersonVisiting    4657.0      2.89     0.73     1.0      2.0      3.0      3.0      5.0  0.046    -0.777
+NumberOfFollowups         4657.0      3.70     1.00     1.0      3.0      4.0      4.0      6.0 -0.355     0.624
+PreferredPropertyStar     4657.0      3.58     0.80     3.0      3.0      3.0      4.0      5.0  0.907    -0.820
+NumberOfTrips             4657.0      3.23     1.85     1.0      2.0      3.0      4.0     22.0  1.478     6.245
+PitchSatisfactionScore    4657.0      3.07     1.36     1.0      2.0      3.0      4.0      5.0 -0.126    -1.100
+NumberOfChildrenVisiting  4657.0      1.17     0.86     0.0      1.0      1.0      2.0      3.0  0.285    -0.599
+MonthlyIncome             4657.0  22961.75  4379.83  1000.0  20346.0  22104.0  24980.0  41246.0  0.946     1.066
+
+=================================================================
+SECTION 3 — TARGET DISTRIBUTION
+=================================================================
+ ProdTaken  Count  Percentage     Label
+         0   3759       80.72 Not Taken
+         1    898       19.28     Taken
+
+  Conversion Rate : 19.28%
+  Class Imbalance Ratio (0:1) : 4.19:1
+
+=================================================================
+SECTION 4 — CONVERSION RATE BY CATEGORICAL FEATURES
+=================================================================
+
+  TypeofContact:
+        Feature        Category  Total  Sold  ConversionRate  NotSold
+TypeofContact Company Invited   1372   308           22.45     1064
+TypeofContact    Self Enquiry   3285   590           17.96     2695
+
+  Occupation:
+     Feature       Category  Total  Sold  ConversionRate  NotSold
+Occupation    Free Lancer      2     2          100.00        0
+Occupation Large Business    427   119           27.87      308
+Occupation Small Business   1975   372           18.84     1603
+Occupation       Salaried   2253   405           17.98     1848
+
+  Gender:
+  Feature Category  Total  Sold  ConversionRate  NotSold
+ Gender     Male   2779   565           20.33     2214
+ Gender   Female   1878   333           17.73     1545
+
+  ProductPitched:
+         Feature     Category  Total  Sold  ConversionRate  NotSold
+ProductPitched        Basic   1826   543           29.74     1283
+ProductPitched     Standard    740   122           16.49      618
+ProductPitched       Deluxe   1714   201           11.73     1513
+ProductPitched         King    127    13           10.24      114
+ProductPitched Super Deluxe    250    19            7.60      231
+
+  MaritalStatus:
+        Feature  Category  Total  Sold  ConversionRate  NotSold
+MaritalStatus    Single    865   294           33.99      571
+MaritalStatus Unmarried    682   166           24.34      516
+MaritalStatus   Married   2218   317           14.29     1901
+MaritalStatus  Divorced    892   121           13.57      771
+
+  Designation:
+      Feature       Category  Total  Sold  ConversionRate  NotSold
+Designation      Executive   1826   543           29.74     1283
+Designation Senior Manager    740   122           16.49      618
+Designation        Manager   1714   201           11.73     1513
+Designation             VP    127    13           10.24      114
+Designation            AVP    250    19            7.60      231
+
+=================================================================
+SECTION 5 — NUMERIC FEATURE MEANS: TAKEN vs NOT TAKEN
+=================================================================
+                          Not Taken (0)  Taken (1)  Difference (Taken - Not)
+Age                               37.75      34.55                     -3.20
+DurationOfPitch                   15.12      16.72                      1.60
+NumberOfPersonVisiting             2.89       2.91                      0.02
+NumberOfFollowups                  3.64       3.94                      0.30
+PreferredPropertyStar              3.54       3.73                      0.19
+NumberOfTrips                      3.21       3.29                      0.08
+PitchSatisfactionScore             3.04       3.23                      0.19
+NumberOfChildrenVisiting           1.17       1.19                      0.02
+MonthlyIncome                  23228.00   21847.23                  -1380.77
+
+=================================================================
+SECTION 6 — PEARSON CORRELATION WITH TARGET (ProdTaken)
+=================================================================
+                 Feature  Correlation  Abs_Correlation Direction   Strength
+                     Age      -0.1407           0.1407  Negative       Weak
+           MonthlyIncome      -0.1244           0.1244  Negative       Weak
+       NumberOfFollowups       0.1176           0.1176  Positive       Weak
+   PreferredPropertyStar       0.0975           0.0975  Positive       Weak
+         DurationOfPitch       0.0756           0.0756  Positive       Weak
+  PitchSatisfactionScore       0.0563           0.0563  Positive       Weak
+           NumberOfTrips       0.0177           0.0177  Positive Negligible
+  NumberOfPersonVisiting       0.0142           0.0142  Positive Negligible
+NumberOfChildrenVisiting       0.0108           0.0108  Positive Negligible
+
+=================================================================
+SECTION 7 — OUTLIER DETECTION (IQR Method)
+=================================================================
+                 Feature      Q1      Q3    IQR  Lower_Fence  Upper_Fence  Outlier_Count  Outlier_%
+       NumberOfFollowups     3.0     4.0    1.0          1.5          5.5            303       6.51
+           MonthlyIncome 20346.0 24980.0 4634.0      13395.0      31931.0            268       5.75
+           NumberOfTrips     2.0     4.0    2.0         -1.0          7.0            108       2.32
+         DurationOfPitch     9.0    19.0   10.0         -6.0         34.0            107       2.30
+                     Age    31.0    42.0   11.0         14.5         58.5             77       1.65
+  NumberOfPersonVisiting     2.0     3.0    1.0          0.5          4.5              3       0.06
+   PreferredPropertyStar     3.0     4.0    1.0          1.5          5.5              0       0.00
+  PitchSatisfactionScore     2.0     4.0    2.0         -1.0          7.0              0       0.00
+NumberOfChildrenVisiting     1.0     2.0    1.0         -0.5          3.5              0       0.00
+
+=================================================================
+SECTION 8 — CROSS-TAB: ProductPitched × MaritalStatus (Conversion Rate %)
+=================================================================
+MaritalStatus   Divorced  Married  Single  Unmarried
+ProductPitched                                      
+Basic               17.9     22.8    44.8       40.4
+Deluxe               9.6      7.9    20.0       18.3
+King                14.3      5.9    16.1        NaN
+Standard            18.3     14.5    20.4       18.2
+Super Deluxe         0.0      6.5    15.0       33.3
+
+=================================================================
+SECTION 9 — CROSS-TAB: Designation × Passport (Conversion Rate %)
+=================================================================
+Passport        No Passport  Has Passport
+Designation                              
+AVP                     4.7          13.6
+Executive              17.7          56.5
+Manager                 8.3          20.7
+Senior Manager         14.1          22.5
+VP                      6.2          22.6
+
+=================================================================
+SECTION 10 — MONTHLY INCOME ANALYSIS BY DESIGNATION
+=================================================================
+   Designation  Count    Mean  Median    Std     Min     Max
+     Executive   1826 19856.0 20689.0 2359.0 16009.0 41246.0
+       Manager   1714 22640.0 22922.0 2350.0  1000.0 38525.0
+Senior Manager    740 26613.0 26416.0 2759.0 17372.0 38395.0
+           AVP    250 30972.0 31795.0 2250.0 17705.0 35563.0
+            VP    127 34913.0 34246.0 2785.0 17517.0 38677.0
+
+=================================================================
+SECTION 11 — FOLLOW-UP COUNT: CONVERSION & INCOME PIVOT
+=================================================================
+ NumberOfFollowups  Customers  Sold  ConversionRate  MeanIncome  MedianAge
+               1.0        171    20           11.70     21227.0       36.0
+               2.0        219    23           10.50     23489.0       36.0
+               3.0       1440   239           16.60     21884.0       36.0
+               4.0       1976   378           19.13     23356.0       36.0
+               5.0        719   186           25.87     23982.0       36.0
+               6.0        132    52           39.39     24628.0       35.0
+
+=================================================================
+SECTION 12 — AGE BAND CONVERSION ANALYSIS
+=================================================================
+AgeBand  Count  Sold  ConversionRate  MeanIncome  MeanAge  PassportRate
+  18-25    343   142           41.40     19530.0     22.3          32.4
+  26-35   1779   394           22.15     21796.0     31.0          26.5
+  36-45   1693   232           13.70     23261.0     39.3          30.3
+  46-55    665    93           13.98     26357.0     50.0          30.4
+    56+    177    37           20.90     25707.0     58.1          39.0
+
+=================================================================
+SECTION 13 — CHI-SQUARE TEST: Categorical Features vs ProdTaken
+=================================================================
+  (Tests whether each categorical feature is statistically
+   independent of the purchase decision.)
+
+       Feature    Chi2  p_value  df Significant                     Conclusion
+ProductPitched 223.408 0.000000   4     YES *** Dependent (linked to purchase)
+ MaritalStatus 185.620 0.000000   3     YES *** Dependent (linked to purchase)
+   Designation 223.408 0.000000   4     YES *** Dependent (linked to purchase)
+    Occupation  31.322 0.000001   3     YES *** Dependent (linked to purchase)
+ TypeofContact  12.241 0.000468   1     YES *** Dependent (linked to purchase)
+        Gender   4.700 0.030170   1       YES * Dependent (linked to purchase)
+
+=================================================================
+SECTION 14 — INDEPENDENT T-TEST: Numeric Features vs ProdTaken
+=================================================================
+  (Tests whether mean of each numeric feature differs
+   significantly between Taken and Not Taken groups.)
+
+                 Feature  Mean_Taken  Mean_NotTaken  Difference  T_Statistic  p_value Significant
+                     Age      34.555         37.746      -3.191       -9.067 0.000000     YES ***
+         DurationOfPitch      16.722         15.121       1.601        5.180 0.000000     YES ***
+       NumberOfFollowups       3.939          3.640       0.299        8.035 0.000000     YES ***
+   PreferredPropertyStar       3.735          3.538       0.197        6.292 0.000000     YES ***
+           MonthlyIncome   21847.227      23228.001   -1380.774       -8.894 0.000000     YES ***
+  PitchSatisfactionScore       3.231          3.036       0.195        3.923 0.000092     YES ***
+           NumberOfTrips       3.294          3.211       0.083        1.117 0.264315          NO
+  NumberOfPersonVisiting       2.913          2.887       0.026        0.997 0.318782          NO
+NumberOfChildrenVisiting       1.192          1.168       0.024        0.735 0.462720          NO
+
+=================================================================
+SECTION 15 — KEY FINDINGS & BUSINESS INSIGHTS
+=================================================================
+
+DATASET
+  Total customers     : 4,657
+  Packages sold       : 898
+  Conversion rate     : 19.28%
+  Class imbalance     : 3759:1 (Not Taken : Taken)
+
+DEMOGRAPHIC INSIGHTS
+  Best age group      : Customers aged 18-35 convert more than 36+ (younger = higher rate)
+  Younger customers (mean age Taken=34.6) convert vs older (Not Taken=37.7)
+  Gender gap          : Male 20.3%  |  Female 17.7%
+
+TOP CONVERTING SEGMENTS
+  Occupation          : Free Lancer (100.0%)
+  Marital Status      : Single (34.0%)
+  Designation         : Executive (29.7%)
+  Product Pitched     : Basic (29.7%)
+  Contact Type        : Company Invited (22.4%)
+
+PASSPORT & CAR EFFECT
+  Passport holders    : 35.4% conversion vs 12.6% (no passport)
+  Own car             : 18.9% conversion vs 19.9% (no car)
+
+PITCH QUALITY
+  More follow-ups lead to higher conversion (Taken mean=3.94 vs Not Taken=3.64)
+  Higher pitch satisfaction = higher conversion (Taken=3.23 vs 3.04)
+  Longer pitch duration = higher conversion (Taken=16.7 min vs 15.1 min)
+
+INCOME
+  Taken group earns LESS on average (INR 21,847) vs Not Taken (INR 23,228)
+  Suggests lower-income customers are more motivated to buy discounted packages
+
+STATISTICAL SIGNIFICANCE (Chi-Square, p < 0.05)
+  Significant features: ProductPitched, MaritalStatus, Designation, Occupation, TypeofContact, Gender
+
+STATISTICAL SIGNIFICANCE (T-Test, p < 0.05)
+  Significant features: Age, DurationOfPitch, NumberOfFollowups, PreferredPropertyStar, MonthlyIncome, PitchSatisfactionScore
+
+STRONGEST PREDICTORS (by |Correlation| with target)
+              Feature  Correlation Strength
+                  Age      -0.1407     Weak
+        MonthlyIncome      -0.1244     Weak
+    NumberOfFollowups       0.1176     Weak
+PreferredPropertyStar       0.0975     Weak
+      DurationOfPitch       0.0756     Weak

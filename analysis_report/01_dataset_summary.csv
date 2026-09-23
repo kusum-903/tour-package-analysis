@@ -1,0 +1,9 @@
+Metric,Value
+Total Rows,4657
+Total Columns,20
+Numeric Columns,9
+Categorical Columns,6
+Binary Columns,2
+Target Column,ProdTaken
+Missing Values,0
+Duplicate Rows,0

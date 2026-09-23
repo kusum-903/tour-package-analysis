@@ -1,0 +1,10 @@
+Feature,Q1,Q3,IQR,Lower_Fence,Upper_Fence,Outlier_Count,Outlier_%
+NumberOfFollowups,3.0,4.0,1.0,1.5,5.5,303,6.51
+MonthlyIncome,20346.0,24980.0,4634.0,13395.0,31931.0,268,5.75
+NumberOfTrips,2.0,4.0,2.0,-1.0,7.0,108,2.32
+DurationOfPitch,9.0,19.0,10.0,-6.0,34.0,107,2.3
+Age,31.0,42.0,11.0,14.5,58.5,77,1.65
+NumberOfPersonVisiting,2.0,3.0,1.0,0.5,4.5,3,0.06
+PreferredPropertyStar,3.0,4.0,1.0,1.5,5.5,0,0.0
+PitchSatisfactionScore,2.0,4.0,2.0,-1.0,7.0,0,0.0
+NumberOfChildrenVisiting,1.0,2.0,1.0,-0.5,3.5,0,0.0

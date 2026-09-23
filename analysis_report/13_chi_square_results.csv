@@ -1,0 +1,7 @@
+Feature,Chi2,p_value,df,Significant,Conclusion
+ProductPitched,223.408,0.0,4,YES ***,Dependent (linked to purchase)
+MaritalStatus,185.62,0.0,3,YES ***,Dependent (linked to purchase)
+Designation,223.408,0.0,4,YES ***,Dependent (linked to purchase)
+Occupation,31.322,1e-06,3,YES ***,Dependent (linked to purchase)
+TypeofContact,12.241,0.000468,1,YES ***,Dependent (linked to purchase)
+Gender,4.7,0.03017,1,YES *,Dependent (linked to purchase)

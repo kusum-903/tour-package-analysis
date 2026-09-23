@@ -1,0 +1,23 @@
+Feature,Category,Total,Sold,ConversionRate,NotSold
+TypeofContact,Company Invited,1372,308,22.45,1064
+TypeofContact,Self Enquiry,3285,590,17.96,2695
+Occupation,Free Lancer,2,2,100.0,0
+Occupation,Large Business,427,119,27.87,308
+Occupation,Small Business,1975,372,18.84,1603
+Occupation,Salaried,2253,405,17.98,1848
+Gender,Male,2779,565,20.33,2214
+Gender,Female,1878,333,17.73,1545
+ProductPitched,Basic,1826,543,29.74,1283
+ProductPitched,Standard,740,122,16.49,618
+ProductPitched,Deluxe,1714,201,11.73,1513
+ProductPitched,King,127,13,10.24,114
+ProductPitched,Super Deluxe,250,19,7.6,231
+MaritalStatus,Single,865,294,33.99,571
+MaritalStatus,Unmarried,682,166,24.34,516
+MaritalStatus,Married,2218,317,14.29,1901
+MaritalStatus,Divorced,892,121,13.57,771
+Designation,Executive,1826,543,29.74,1283
+Designation,Senior Manager,740,122,16.49,618
+Designation,Manager,1714,201,11.73,1513
+Designation,VP,127,13,10.24,114
+Designation,AVP,250,19,7.6,231
