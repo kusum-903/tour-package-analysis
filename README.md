@@ -1,6 +1,6 @@
-# ✈️ Tour Package Sales & Customer Conversion Analysis
+# Tour Package Sales & Customer Conversion Analysis
 
-## 📌 Project Overview
+## Project Overview
 
 This project analyzes customer data from a travel company to understand **tour package purchase behavior** and identify factors associated with customer conversion.
 
@@ -22,7 +22,7 @@ The cleaned analysis dataset contains **4,657 customers and 20 features**, of wh
 
 ---
 
-## 🎯 Project Objectives
+##  Project Objectives
 
 1. Understand customer characteristics associated with tour-package purchases.
 2. Analyze conversion rates across different customer and product segments.
@@ -34,7 +34,7 @@ The cleaned analysis dataset contains **4,657 customers and 20 features**, of wh
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 ### Dataset Information
 
@@ -88,7 +88,7 @@ kaggle.com/datasets/sanamps/tourpackageprediction
 
 ---
 
-## 🧹 Data Cleaning
+##  Data Cleaning
 
 The data cleaning process includes:
 
@@ -111,7 +111,7 @@ The cleaned dataset is saved as:
 
 ---
 
-## 📈 Exploratory Data Analysis
+##  Exploratory Data Analysis
 
 The project performs EDA on both numerical and categorical variables.
 
@@ -139,7 +139,7 @@ folder.
 
 ---
 
-## 📐 Statistical Analysis
+##  Statistical Analysis
 
 The project performs several statistical analyses, including:
 
@@ -159,7 +159,7 @@ The generated statistical reports are stored in:
 
 ---
 
-## 🧠 Feature Engineering
+##  Feature Engineering
 
 Additional features were created to support deeper customer analysis and machine learning.
 
@@ -180,7 +180,7 @@ These features were created using customer demographic, income, travel, engageme
 
 ---
 
-## 🤖 Machine Learning
+##  Machine Learning
 
 The project compares multiple classification algorithms:
 
@@ -209,19 +209,19 @@ The trained pipeline and model-related artifacts are stored in:
 
 ---
 
-## 📊 Interactive Streamlit Dashboard
+##  Interactive Streamlit Dashboard
 
 The project includes an interactive Streamlit dashboard for exploring customer conversion behavior.
 
 ### Dashboard Sections
 
-- 📊 Overview
-- 👤 Demographics
-- 🎯 Product & Pitch
-- 💰 Income & Designation
-- 🔗 Correlations
-- 📐 Statistical Tests
-- 🔎 Data Explorer
+-  Overview
+-  Demographics
+-  Product & Pitch
+-  Income & Designation
+- Correlations
+-  Statistical Tests
+-  Data Explorer
 
 ### Available Filters
 
